@@ -2,8 +2,19 @@ import { Placar } from "./Placar"
 import { Carta } from "./Cartas"
 import { paresDeCartas } from "../constantes/cartas"
 import { Resultado } from "./Resultado"
+import { LogicaProvider } from "../contexts/Logica"
 
-const JogoDaMemoria = () => {
+export const JogoDaMemoria = () => {
+  return (
+    <LogicaProvider>
+      <JogoDaMemoriaConteudo />
+    </LogicaProvider>
+  )
+}
+
+
+
+export const JogoDaMemoriaConteudo = () => {
 
   return (
     <div className="jogo-da-memoria">
@@ -18,6 +29,3 @@ const JogoDaMemoria = () => {
     </div>
   )
 }
-
-export default JogoDaMemoria
-
