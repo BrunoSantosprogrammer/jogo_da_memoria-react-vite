@@ -1,6 +1,7 @@
 import { Placar } from "./Placar"
 import { Carta } from "./Cartas"
 import { paresDeCartas } from "../constantes/cartas"
+import { Resultado } from "./Resultado"
 
 const JogoDaMemoria = () => {
 
@@ -13,6 +14,7 @@ const JogoDaMemoria = () => {
             {paresDeCartas.map((carta) => <Carta key={carta.id} {...carta}/>)}
           </div>
       </div>
+      <Resultado />
     </div>
   )
 }
