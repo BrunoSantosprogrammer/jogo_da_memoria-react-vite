@@ -48,8 +48,12 @@
 
 .jogo-da-memoria__cartas {
   display: grid;
-  grid-template-columns:repeat(4,1fr);
-  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+  @media (max-width: 767px) {
+    grid-template-columns:  repeat(3, 1fr);
+  }
 }
 .carta {
   width: 100%;
@@ -79,7 +83,8 @@
   transform-style: preserve-3d;
 }
 
-.carta__frente, .carta__costas {
+.carta__frente,
+.carta__costas {
   width: 100%;
   height: 100%;
   border-radius: 6px;
@@ -94,16 +99,18 @@
 
 .carta__frente {
   background-color: crimson;
+  background-image: url('/textura.png');
+  background-position: center;
+  background-size: cover;
 }
 
 .carta__costas {
   transform: rotateY(180deg);
 }
 
-.carta:hover .carta__conteudo{
+.carta--virada .carta__conteudo {
   transform: rotateY(180deg);
 }
-
 
 .placar {
   display: flex;
@@ -127,7 +134,7 @@
   justify-content: center;
   align-items: center;
   padding: 16px;
-  background-color:rgba(0, 0, 0, 0.5) ;
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   opacity: 0;
   visibility: hidden;
@@ -139,7 +146,7 @@
 }
 
 .resultado__caixa {
-  padding: 16px 32px ;
+  padding: 16px 32px;
   background-color: #333;
   border-radius: 16px;
   text-align: center;
@@ -147,4 +154,8 @@
 
 .resultado__porcentos {
   margin-bottom: 8px;
+}
+
+.carta--encontrada {
+  animation: animar-encontrada 0.5s 0.8s forwards;
 }

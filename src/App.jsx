@@ -1,11 +1,10 @@
-import JogoDaMemoria, {} from './components/JogoDaMemoria';
+import { JogoDaMemoria } from './components/JogoDaMemoria'
 
 function App() {
-
   return (
-      <div className="App">
-        <JogoDaMemoria/>
-      </div>
+    <div className="App">
+      <JogoDaMemoria />
+    </div>
   )
 }
 
