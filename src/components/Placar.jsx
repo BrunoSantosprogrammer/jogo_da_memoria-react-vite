@@ -1,17 +1,7 @@
 import { useJogoDaMemoria } from '../hooks/useJogoMemoria'
 
-export const Placar = () => {
-  const { quantidadeCartasViradas, quantidadeDePontos } = useJogoDaMemoria()
-  return (
-    <div className="placar">
-      <Pontos titulo="Pontos" valor={quantidadeDePontos} />
-      <Pontos titulo="Cartas viradas" valor={quantidadeCartasViradas} />
-    </div>
-  )
-}
-
 // eslint-disable-next-line react/prop-types
-const Pontos = ({ titulo, valor }) => {
+export const Pontos = ({ titulo, valor }) => {
   return (
     <div className="pontos">
       <strong className="pontos__titulo">{titulo}: </strong>
@@ -19,3 +9,14 @@ const Pontos = ({ titulo, valor }) => {
     </div>
   )
 }
+
+export const Placar = () => {
+  const { quantidadeCartasViradas, } = useJogoDaMemoria()
+  return (
+    <div className="placar">
+      <Pontos titulo="Cartas viradas" valor={quantidadeCartasViradas} />
+      <Pontos titulo="Nível" valor={1}/>
+    </div>
+  )
+}
+

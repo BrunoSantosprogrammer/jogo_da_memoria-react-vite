@@ -1,5 +1,5 @@
 import {  useState, createContext } from 'react'
-import { paresDeCartas } from '../constantes/cartas'
+import { paresDeCartas} from '../constantes/cartas'
 import { PONTOS, TEMPO_MS } from '../constantes/configuracoes'
 import { buscarCartas } from '../services/buscarCartasParaOJogoDaMemoria'
 
@@ -36,6 +36,8 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
     definirIdDasCartasViradas([])
     definirQuantidadeCartasViradas(0)
     definirCartas(paresDeCartas)
+    definirQuantidadeDePontos(0)
+    iniciarJogo()
   }
 
   const compararCartas = ([id1, id2]) => {

@@ -2,7 +2,7 @@ export const resultados = [
   {
     titulo: "Excelente",
     imagem: "kitekat-4.png",
-    min: 75,
+    min: 70,
   },
   {
     titulo: "Bom",
@@ -12,11 +12,11 @@ export const resultados = [
   {
     titulo: "Esquecido",
     imagem: "kitekat-2.png",
-    min: 25
+    min: 35
   },
   {
     titulo: "Amnésia",
     imagem: "kitekat-1.png",
-    min: 0,
+    min: 25,
   }
 ];

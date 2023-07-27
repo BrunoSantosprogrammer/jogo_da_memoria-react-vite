@@ -4,11 +4,14 @@ import classNames from 'classnames';
 import { useJogoDaMemoria } from '../hooks/useJogoMemoria';
 import { resultados } from '../constantes/resultado';
 
+import { Pontos} from '../components/Placar'
+
 export const Resultado = () => {
   const {
     idsDosParesEncontrados,
     cartas,
     quantidadeCartasViradas,
+    quantidadeDePontos,
     reiniciarJogo,
   } = useJogoDaMemoria();
 
@@ -41,6 +44,8 @@ export const Resultado = () => {
         <p className="resultado__porcentos">
           <strong>Taxa de acertos: </strong>
           <span>{taxaDeAcertos.toFixed(0)}%</span>
+          <Pontos titulo="Pontos" valor={ quantidadeDePontos } />
+          <Pontos titulo="Cartas viradas" valor={quantidadeCartasViradas} />
         </p>
         <button className="button" onClick={reiniciarJogo}>
           Nova Partida

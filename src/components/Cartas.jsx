@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { useJogoDaMemoria } from '../hooks/useJogoMemoria';
 
+// eslint-disable-next-line react/prop-types
 export const Carta = ({ id, idDoPar, imagem }) => {
   const { virarCarta, idsDasCartasViradas, idsDosParesEncontrados } =
     useJogoDaMemoria();

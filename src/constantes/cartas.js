@@ -7,6 +7,15 @@ const imagens = [
   'shrek.png'
 ]
 
+// const imagens2 = [
+//   'monstros1.png',
+//   'monstros2.png',
+//   'rapunzel.png',
+//   'spider-man.png',
+//   'elsa.png',
+//   'frozen1.png'
+// ]
+
 const cartasUnicas = imagens.map((imagem, idDoPar) => ({
   idDoPar,
   imagem
