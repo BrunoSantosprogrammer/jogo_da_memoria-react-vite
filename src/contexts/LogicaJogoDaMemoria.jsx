@@ -1,5 +1,5 @@
 import {  useState, createContext } from 'react'
-import { paresDeCartas} from '../constantes/cartas'
+import {  paresDeCartas, paresDeCartas2} from '../constantes/cartas'
 import { PONTOS, TEMPO_MS } from '../constantes/configuracoes'
 import { buscarCartas } from '../services/buscarCartasParaOJogoDaMemoria'
 
@@ -32,12 +32,20 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
   }
 
   const reiniciarJogo = () => {
+    definirCartas(paresDeCartas)
     definirIdsDosParesEncontrados([])
     definirIdDasCartasViradas([])
     definirQuantidadeCartasViradas(0)
-    definirCartas(paresDeCartas)
     definirQuantidadeDePontos(0)
     iniciarJogo()
+  }
+
+  const proximoNivel = () => {
+    definirCartas(paresDeCartas2)
+    definirIdsDosParesEncontrados([])
+    definirIdDasCartasViradas([])
+    definirQuantidadeCartasViradas(0)
+    definirQuantidadeDePontos(0)
   }
 
   const compararCartas = ([id1, id2]) => {
@@ -85,6 +93,7 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
     virarCarta,
     iniciarJogo,
     reiniciarJogo,
+    proximoNivel,
     idsDasCartasViradas,
     idsDosParesEncontrados,
     carregandoCartas

@@ -1,9 +1,8 @@
 import { useMemo } from 'react';
-
 import classNames from 'classnames';
+
 import { useJogoDaMemoria } from '../hooks/useJogoMemoria';
 import { resultados } from '../constantes/resultado';
-
 import { Pontos} from '../components/Placar'
 
 export const Resultado = () => {
@@ -13,6 +12,7 @@ export const Resultado = () => {
     quantidadeCartasViradas,
     quantidadeDePontos,
     reiniciarJogo,
+    proximoNivel
   } = useJogoDaMemoria();
 
   
@@ -49,6 +49,9 @@ export const Resultado = () => {
         </p>
         <button className="button" onClick={reiniciarJogo}>
           Nova Partida
+        </button>
+        <button className="button" onClick={proximoNivel}>
+          tema 2
         </button>
         <p>
           <small>

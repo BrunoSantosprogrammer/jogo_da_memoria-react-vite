@@ -15,7 +15,6 @@ export const Placar = () => {
   return (
     <div className="placar">
       <Pontos titulo="Cartas viradas" valor={quantidadeCartasViradas} />
-      <Pontos titulo="Nível" valor={1}/>
     </div>
   )
 }

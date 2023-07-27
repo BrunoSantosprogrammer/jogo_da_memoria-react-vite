@@ -7,14 +7,14 @@ const imagens = [
   'shrek.png'
 ]
 
-// const imagens2 = [
-//   'monstros1.png',
-//   'monstros2.png',
-//   'rapunzel.png',
-//   'spider-man.png',
-//   'elsa.png',
-//   'frozen1.png'
-// ]
+const imagens2 = [
+  'divertidamente.png',
+  'sakura.png',
+  'rapunzel.png',
+  'sasuke.png',
+  'raiva.png',
+  'naruto.png'
+]
 
 const cartasUnicas = imagens.map((imagem, idDoPar) => ({
   idDoPar,
@@ -22,6 +22,19 @@ const cartasUnicas = imagens.map((imagem, idDoPar) => ({
 }))
 
 export const paresDeCartas = [...cartasUnicas, ...cartasUnicas].map(
+  (carta, id) => ({
+    ...carta,
+    id
+  })
+)
+
+
+const cartasUnicas2 = imagens2.map((imagem, idDoPar) => ({
+  idDoPar,
+  imagem
+}))
+
+export const paresDeCartas2 = [...cartasUnicas2, ...cartasUnicas2].map(
   (carta, id) => ({
     ...carta,
     id
