@@ -13,7 +13,11 @@ const imagens2 = [
   'rapunzel.png',
   'sasuke.png',
   'raiva.png',
-  'naruto.png'
+  'naruto.png',
+  'madagascar.png',
+  'madagascar2.png',
+  'madagascar3.png',
+  'angryBirds.png',
 ]
 
 const cartasUnicas = imagens.map((imagem, idDoPar) => ({

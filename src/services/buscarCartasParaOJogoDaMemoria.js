@@ -1,8 +1,12 @@
-import { paresDeCartas } from '../constantes/cartas'
+import { paresDeCartas, paresDeCartas2 } from '../constantes/cartas'
 
 export const buscarCartas = async () => {
   await delay(500)
   return embaralharLista(paresDeCartas)
+}
+export const buscarCartas2 = async () => {
+  await delay(500)
+  return embaralharLista(paresDeCartas2)
 }
 
 const delay = async (tempo = 2000) => {

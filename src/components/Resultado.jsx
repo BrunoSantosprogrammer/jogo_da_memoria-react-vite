@@ -12,7 +12,7 @@ export const Resultado = () => {
     quantidadeCartasViradas,
     quantidadeDePontos,
     reiniciarJogo,
-    proximoNivel
+    nivel_2
   } = useJogoDaMemoria();
 
   
@@ -50,8 +50,8 @@ export const Resultado = () => {
         <button className="button" onClick={reiniciarJogo}>
           Nova Partida
         </button>
-        <button className="button" onClick={proximoNivel}>
-          tema 2
+        <button className="button" onClick={nivel_2}>
+          Proximo nível
         </button>
         <p>
           <small>

@@ -32,6 +32,10 @@
   cursor: pointer;
   transition: border-color 0.25s;
   margin-right: 8px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 8px;
+  }
 }
 
 .button:hover {
@@ -40,11 +44,19 @@
 
 .jogo-da-memoria {
   padding: 16px;
+
+  @media (max-width: 767px) {
+    padding: 8px;
+  }
 }
 
 .jogo-da-memoria__conteudo {
   max-width: 600px;
   margin: 0 auto;
+
+  @media (max-width: 767px) {
+    max-width: 300px;
+  }
 }
 
 .jogo-da-memoria__cartas {
@@ -53,7 +65,17 @@
   gap: 12px;
 
   @media (max-width: 767px) {
-    grid-template-columns:  repeat(3, 1fr);
+    gap: 6px;
+  }
+}
+.jogo-da-memoria__cartas2 {
+  display: none;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
   }
 }
 .carta {
@@ -62,7 +84,8 @@
   perspective: 400px;
 
   @media (max-width: 767px) {
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 
   /* button */
@@ -79,7 +102,8 @@
   object-fit: contain;
 
   @media(max-width: 767px) {
-    height: 100px;
+    height: 70px;
+
   }
 }
 
@@ -126,10 +150,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-}
-
-.pontos {
-  padding: 16px;
 }
 
 .resultado {

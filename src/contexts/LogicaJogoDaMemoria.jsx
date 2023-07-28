@@ -1,7 +1,7 @@
 import {  useState, createContext } from 'react'
-import {  paresDeCartas, paresDeCartas2} from '../constantes/cartas'
+import {  paresDeCartas} from '../constantes/cartas'
 import { PONTOS, TEMPO_MS } from '../constantes/configuracoes'
-import { buscarCartas } from '../services/buscarCartasParaOJogoDaMemoria'
+import { buscarCartas, buscarCartas2 } from '../services/buscarCartasParaOJogoDaMemoria'
 
 export const LogicaJogoDaMemoriaContext = createContext()
 
@@ -40,8 +40,11 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
     iniciarJogo()
   }
 
-  const proximoNivel = () => {
-    definirCartas(paresDeCartas2)
+  const nivel_2 = async () => {
+    definirCarregandoCartas(true)
+    const cartas2 = await buscarCartas2()
+    definirCartas(cartas2)
+    definirCarregandoCartas(false)
     definirIdsDosParesEncontrados([])
     definirIdDasCartasViradas([])
     definirQuantidadeCartasViradas(0)
@@ -93,7 +96,7 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
     virarCarta,
     iniciarJogo,
     reiniciarJogo,
-    proximoNivel,
+    nivel_2,
     idsDasCartasViradas,
     idsDosParesEncontrados,
     carregandoCartas
