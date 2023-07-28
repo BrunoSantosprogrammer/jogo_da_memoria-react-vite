@@ -17,7 +17,7 @@ const imagens2 = [
   'madagascar.png',
   'madagascar2.png',
   'madagascar3.png',
-  'angryBirds.png',
+  'math.png',
 ]
 
 const cartasUnicas = imagens.map((imagem, idDoPar) => ({
